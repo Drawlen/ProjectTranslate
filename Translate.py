@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 
 translator = Translator()
 
-bot = telebot.TeleBot('5340373499:AAHqOE2bXJ7_-mYloTO4oKat_tmySpgNG0s')
+bot = telebot.TeleBot('')
 
 @bot.message_handler(commands=['start'])
 def start(message):
@@ -48,7 +48,7 @@ def get_user_text(message):
 
         elif message.text == '✨Случайный набор✨':
             bot.send_message(message.chat.id, "<i>✨Генерирую случайный набор слов...✨</i>", parse_mode='html')
-            url = 'https://kreekly.com/random//'
+            url = 'https://kreekly.com/random/'
             response = requests.get(url)
             soup = BeautifulSoup(response.text, 'lxml')
             items = soup.find_all('div', class_='dict-word')
@@ -56,7 +56,7 @@ def get_user_text(message):
             for n, i in enumerate(items, start=1):
                 itemEng = i.find('span', class_='eng').text.strip()
                 itemRus = i.find('span', class_='rus').text
-
+                # itemTrans = i.find('span', class_='no-mobile transcript').text
                 bot.send_message(message.chat.id, (f'{n}. {itemEng} - {itemRus}'))
 
 
