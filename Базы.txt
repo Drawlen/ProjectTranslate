@@ -1,4 +1,4 @@
------Основные базы-----
+-----Osnova Base-----
 python.exe -m pip install --upgrade pip
 pip install pyTelegramBotAPI
 pip install googletrans-py
@@ -7,8 +7,4 @@ pip install lxml
 pip install requests
 pip install beautifulsoup4
 
------Не нужные------
-pip install word2word
-pip install randword
-pip install google-translate.py ------не оно
-5340373499:AAHqOE2bXJ7_-mYloTO4oKat_tmySpgNG0s
+
