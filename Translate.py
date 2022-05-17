@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 
 translator = Translator()
 
-bot = telebot.TeleBot('5340373499:AAHqOE2bXJ7_-mYloTO4oKat_tmySpgNG0s')
+bot = telebot.TeleBot('')
 
 @bot.message_handler(commands=['start'])
 def start(message):
